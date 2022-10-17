@@ -1,0 +1,25 @@
+#include <iostream>
+#include <deque>
+
+using namespace std;
+
+int main()
+{
+    deque<int>q ;
+    q.push_back(1) ;
+    q.push_front(2) ;
+    for(int i : q)
+    {
+        cout << i << " " ;
+    }
+  //  q.pop_front() ;
+    cout << endl ;
+    cout << "The element at the first index is " << q.at(0) <<  endl ;
+    cout << "Front ->" << q.front() << endl ;
+    cout <<"Back ->" << q.back() <<  endl ;
+    //for the deletion in an deque 
+    cout <<"Before erase " << q.size() <<  endl ;
+    q.erase(q.begin() , q.begin()+1) ;
+    cout << "After erase " << q.size() <<  endl ;
+    return 0;
+}
